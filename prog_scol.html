@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python pour les Secondes</title>
+    <link rel="stylesheet" href="../style/prog_scol.css">
+</head>
+<body>
+    <!-- Vidéo de fond -->
+    <video class="background-video" autoplay muted loop>
+        <source src="../assest/12680994_1920_1080_25fps.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <!-- Contenu principal -->
+    <header>
+        <h1>Python pour les Secondes</h1><a href="index.html">Retour à l'accueil</a>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Ce cours est conçu pour vous aider à réviser Python, un langage essentiel du programme de seconde. Préparez-vous pour vos tests avec ces notions de base.</p>
+        </section>
+        <section>
+            <h2>Syntaxe et Indentation</h2>
+            <p>En Python, l'indentation définit les blocs de code. Contrairement à d'autres langages, il n'y a pas d'accolades. Une mauvaise indentation provoque une erreur d'exécution.</p>
+            <p>Les commentaires se font avec le symbole <code>#</code>. Tout ce qui suit est ignoré par le programme.</p>
+            <p><strong>Exemple :</strong></p>
+            <pre>
+# Ceci est un commentaire
+if x > 10:
+    print("x est plus grand que 10")
+            </pre>
+        </section>
+        <section>
+            <h2>Variables</h2>
+            <p>Une variable est créée en lui affectant une valeur avec le symbole <code>=</code>. Python détermine automatiquement le type de la variable en fonction de la valeur assignée. Les types courants sont entier, flottant, chaîne de caractères et booléen.</p>
+            <p><strong>Exemple :</strong></p>
+            <pre>
+x = 5  # Un entier
+y = 3.14  # Un flottant
+nom = "Alice"  # Une chaîne de caractères
+est_majeur = True  # Un booléen
+            </pre>
+        </section>
+        <section>
+            <h2>Conditions</h2>
+            <p>Les structures conditionnelles permettent d'exécuter un bloc de code uniquement si une condition est vraie.</p>
+            <p><strong>Exemple :</strong></p>
+            <pre>
+age = 20
+if age >= 18:
+    print("Majeur")
+else:
+    print("Mineur")
+            </pre>
+        </section>
+        <section>
+            <h2>Boucles</h2>
+            <p>Les boucles permettent de répéter un bloc de code plusieurs fois :</p>
+            <ul>
+                <li><code>for</code> : permet de répéter un bloc un nombre défini de fois.</li>
+                <li><code>while</code> : répète le bloc tant qu'une condition est vraie.</li>
+            </ul>
+            <p><strong>Exemple avec <code>for</code> :</strong></p>
+            <pre>
+for i in range(5):
+    print(i)
+            </pre>
+            <p><strong>Exemple avec <code>while</code> :</strong></p>
+            <pre>
+compte = 0
+while compte < 5:
+    print(compte)
+    compte += 1
+            </pre>
+        </section>
+        <section>
+            <h2>Exercice : Moyenne des notes</h2>
+            <p>Voici un script simple pour calculer la moyenne des notes :</p>
+            <pre>
+# Demander le nombre de notes
+nombre_notes = int(input("Nombre de notes : "))
+
+# Initialiser la somme
+somme = 0
+
+# Boucle pour entrer les notes
+for i in range(nombre_notes):
+    note = float(input(f"Note {i + 1} : "))
+    somme += note
+
+# Calculer et afficher la moyenne
+moyenne = somme / nombre_notes
+print(f"Votre moyenne est : {moyenne}")
+            </pre>
+        </section>
+        <section>
+            <h2>Questions Fréquentes</h2>
+            <ul>
+                <li><strong>Type de <code>x</code> après <code>x = 3.5</code> :</strong>
+                    <p>Le type de <code>x</code> est <strong>flottant</strong> (ou <em>float</em> en anglais). En Python, lorsqu'un nombre décimal est assigné à une variable, celle-ci devient automatiquement un nombre à virgule flottante (type <code>float</code>).</p>
+                    <p><strong>Exemple :</strong></p>
+                    <pre>
+        x = 3.5  # x devient un flottant
+        print(type(x))  # Affiche <class 'float'>
+                    </pre>
+                </li>
+                <li><strong>Valeur de <code>x</code> après <code>x = 10; x = x + 5</code> :</strong>
+                    <p>La valeur de <code>x</code> sera <strong>15</strong>. Voici pourquoi :</p>
+                    <p>Dans cette opération, <code>x = 10</code> assigne la valeur 10 à <code>x</code>, puis l'expression suivante <code>x = x + 5</code> ajoute 5 à la valeur actuelle de <code>x</code> (qui était 10), donc <code>x</code> devient 15.</p>
+                    <p><strong>Exemple :</strong></p>
+                    <pre>
+        x = 10
+        x = x + 5  # x devient 15
+        print(x)  # Affiche 15
+                    </pre>
+                </li>
+                <li><strong>Sortie de <code>print("informatique"[1:4])</code> :</strong>
+                    <p>La sortie de cette commande sera <strong>"nfo"</strong>.</p>
+                    <p>En Python, lorsque vous utilisez une tranche (slice) sur une chaîne de caractères, vous obtenez une sous-chaîne allant de l'indice de début (inclus) jusqu'à l'indice de fin (exclus). Ici, <code>[1:4]</code> signifie que l'on commence à l'indice 1 et on s'arrête avant l'indice 4. La chaîne "informatique" contient les caractères suivants :</p>
+                    <ul>
+                        <li>Indice 0 : "i"</li>
+                        <li>Indice 1 : "n"</li>
+                        <li>Indice 2 : "f"</li>
+                        <li>Indice 3 : "o"</li>
+                        <li>Indice 4 : "r"</li>
+                    </ul>
+                    <p>Les caractères compris entre l'indice 1 et 3 sont "n", "f" et "o", d'où la sortie <strong>"nfo"</strong>.</p>
+                    <p><strong>Exemple :</strong></p>
+                    <pre>
+        print("informatique"[1:4])  # Affiche "nfo"
+                    </pre>
+                </li>
+                <li><strong>Nombre de fois que "Python" est imprimé dans <code>for i in range(5): print("Python")</code> :</strong>
+                    <p>Le mot "Python" sera imprimé <strong>5 fois</strong>.</p>
+                    <p>Le <code>range(5)</code> génère une séquence de 5 valeurs allant de 0 à 4, et à chaque itération, la fonction <code>print("Python")</code> est appelée, affichant le mot "Python".</p>
+                    <p><strong>Exemple :</strong></p>
+                    <pre>
+        for i in range(5):
+            print("Python")  # Affiche "Python" 5 fois
+                    </pre>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Conclusion</h2>
+            <p>Python est un langage facile à apprendre et très puissant. La pratique est essentielle pour progresser FONCE!</p>
+        </section>
+    </main>
+</body>
+</html>

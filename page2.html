@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usages de Python</title>
+    <link rel="stylesheet" href="../style/prog_scol.css">
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="../assest/12680994_1920_1080_25fps.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <header>
+        <h1>Usages de Python dans différents domaines</h1>
+        <a href="index.html">Retour à l'accueil</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Développement Web</h2>
+            <p>Python est largement utilisé pour créer des sites web et des applications web dynamiques. Le framework <strong>Flask</strong> permet de créer rapidement des applications simples.</p>
+            <p><strong>Exemple de code (simplifier) :</strong></p>
+            <pre>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Bienvenue sur mon site web !"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+            </pre>
+            <p>Ce code crée un serveur web de base qui affiche un message de bienvenue à l'utilisateur.</p>
+        </section>
+
+        <section>
+            <h2>2. Analyse de Données</h2>
+            <p>Python permet de manipuler et analyser des ensembles de données avec des bibliothèques comme <strong>pandas</strong> et <strong>numpy</strong>.</p>
+            <p><strong>Exemple de code :</strong></p>
+            <pre>
+import pandas as pd
+
+# Créer un DataFrame avec des données fictives
+data = {'Nom': ['Alice', 'Bob', 'Charlie'], 'Âge': [23, 30, 35]}
+df = pd.DataFrame(data)
+
+# Afficher les données
+print(df)
+            </pre>
+            <p>Ce code crée un tableau de données (DataFrame) et l'affiche à l'écran.</p>
+        </section>
+
+        <section>
+            <h2>3. Automatisation de Tâches</h2>
+            <p>Python est un excellent choix pour automatiser des tâches répétitives, comme la gestion de fichiers.</p>
+            <p><strong>Exemple de code :</strong></p>
+            <pre>
+import shutil
+
+# Copier un fichier d'un répertoire à un autre
+shutil.copy('source.txt', 'destination.txt')
+            </pre>
+            <p>Ce code copie un fichier <code>source.txt</code> dans un autre répertoire sous le nom <code>destination.txt</code>.</p>
+        </section>
+
+        <section>
+            <h2>4. Intelligence Artificielle et Apprentissage Automatique</h2>
+            <p>Python est très utilisé dans le domaine de l'intelligence artificielle (IA) et du machine learning. Des bibliothèques comme <strong>scikit-learn</strong> permettent de créer des modèles de machine learning facilement.</p>
+            <p><strong>Exemple de code :</strong></p>
+            <pre>
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Données d'exemple
+X = np.array([[1], [2], [3], [4], [5]])  # Variable d'entrée
+y = np.array([1, 2, 3, 4, 5])  # Variable de sortie
+
+# Créer et entraîner le modèle
+model = LinearRegression()
+model.fit(X, y)
+
+# Prédire une nouvelle valeur
+prediction = model.predict([[6]])
+print(prediction)  # Prédit la valeur de y pour X=6
+            </pre>
+            <p>Ce code crée un modèle de régression linéaire pour prédire une valeur de sortie basée sur une entrée donnée.</p>
+        </section>
+
+        <section>
+            <h2>5. Développement de Jeux Vidéo</h2>
+            <p>Python permet de créer des jeux vidéo 2D avec des bibliothèques comme <strong>pygame</strong>.</p>
+            <p><strong>Exemple de code :</strong></p>
+            <pre>
+import pygame
+
+# Initialiser pygame
+pygame.init()
+
+# Créer une fenêtre de jeu
+screen = pygame.display.set_mode((400, 300))
+pygame.display.set_caption("Mon jeu")
+
+# Boucle de jeu
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+# Quitter pygame
+pygame.quit()
+            </pre>
+            <p>Ce code ouvre une fenêtre vide pour un jeu et attend que l'utilisateur la ferme.</p>
+        </section>
+
+        <section>
+            <h2>6. Scripting et Gestion de Systèmes</h2>
+            <p>Python peut être utilisé pour interagir avec le système d'exploitation, exécuter des commandes ou surveiller des processus.</p>
+            <p><strong>Exemple de code :</strong></p>
+            <pre>
+import subprocess
+
+# Exécuter une commande système
+subprocess.run(['ls', '-l'])
+            </pre>
+            <p>Ce code exécute la commande <code>ls -l</code> pour afficher la liste des fichiers dans le répertoire courant.</p>
+        </section>
+
+    </main>
+</body>
+</html>
