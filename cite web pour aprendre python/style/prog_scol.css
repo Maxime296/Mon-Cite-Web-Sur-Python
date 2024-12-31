@@ -1,0 +1,115 @@
+/* Style global */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    position: relative;
+}
+
+/* Vidéo de fond */
+.background-video {
+    position: fixed; /* Fixe la vidéo en arrière-plan */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Assure que la vidéo couvre toute la hauteur de la fenêtre */
+    object-fit: cover; /* Couvre toute la fenêtre sans déformation */
+    z-index: -1; /* La vidéo reste derrière le contenu */
+}
+
+/* Contenu principal */
+body {
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur sombre pour contraster avec le fond vidéo */
+    color: #f8f8f2;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: scroll; /* Permet le défilement vertical */
+}
+
+header {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Centrer les titres (h1, h2, etc.) */
+h1, h2 {
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Arrière-plan légèrement plus sombre */
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+pre, code {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    border: 2px solid #333;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+code {
+    padding: 5px;
+    border: 2px solid #333;
+    font-size: 1rem;
+    display: inline-block;
+    /* Pas de centrage ici */
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: #fff;
+}
+
+footer p {
+    margin-right: 15px;
+}
+
+footer button {
+    background-color: #8e7d6f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+footer button:hover {
+    background-color: #a68a6d;
+}
